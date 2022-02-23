@@ -22,6 +22,6 @@ class EnemyTest {
          Enemy slime = new Enemy("スライムもどき", 10, 100);
          demoHero.attack(slime); //overkill 確実にやったはず
          slime.attack(demoHero);
-         assertEquals(defaultHeroHp, demoHero.hitPoint);
+         assertEquals(defaultHeroHp, demoHero.getHitPoint());
      }
  }
