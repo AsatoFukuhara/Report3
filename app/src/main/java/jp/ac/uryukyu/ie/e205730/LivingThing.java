@@ -56,7 +56,7 @@ package jp.ac.uryukyu.ie.e205730;
 
      public void wounded(int damage){
          hitPoint -= damage;
-         if( hitPoint < 0 ) {
+         if( hitPoint <= 0 ) {
             dead = true;
             System.out.printf("%sは倒れた。\n", name);
          }
