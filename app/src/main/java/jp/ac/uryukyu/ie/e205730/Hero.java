@@ -33,7 +33,7 @@ public class Hero extends LivingThing {
         hitPoint -= damage;
         if( hitPoint < 0 ) {
             dead = true;
-            System.out.printf("勇者%sは倒れてしまった。\n", name);
+            System.out.printf("勇者%sは道半ばで力尽きてしまった。\n", name);
         }
     }
     
