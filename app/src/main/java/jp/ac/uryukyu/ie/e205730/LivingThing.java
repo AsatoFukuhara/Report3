@@ -4,22 +4,12 @@ package jp.ac.uryukyu.ie.e205730;
 
 
  public class LivingThing {
-     String name;//フィールド変数
-     int hitPoint;
-     int attack;
-     boolean dead;
+    private String name;//フィールド変数
+    private int hitPoint;
+    private int attack;
+    private boolean dead;
 
-
-     public LivingThing (String name, int maximumHP, int attack) {//共通項目の書き出し
-         this.name = name;
-         hitPoint = maximumHP;
-         this.attack = attack;
-         dead = false;
-         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, maximumHP, attack);
-     }
-
-
-     public String getName(){
+    public String getName(){
         return this.name;
     }
     public int getHitPoint(){
@@ -45,6 +35,18 @@ package jp.ac.uryukyu.ie.e205730;
     }
 
 
+     public LivingThing (String name, int maximumHP, int attack) {//共通項目の書き出し
+         this.name = name;
+         hitPoint = maximumHP;
+         this.attack = attack;
+         dead = false;
+         System.out.printf("%sのHPは%d。攻撃力は%dです。\n", name, maximumHP, attack);
+     }
+
+
+
+
+
      public void attack(LivingThing opponent){
          if(!dead){
              int damage = (int)(Math.random() * attack);
@@ -58,7 +60,7 @@ package jp.ac.uryukyu.ie.e205730;
          hitPoint -= damage;
          if( hitPoint <= 0 ) {
             dead = true;
-            System.out.printf("%sは倒れた。\n", name);
+            System.out.printf("%sは倒れた。\n", getName());
          }
      }
 
